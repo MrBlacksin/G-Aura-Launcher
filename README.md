@@ -11,7 +11,7 @@ The latest version of the application can be downloaded in the [Releases section
 ## 🛠️ Development
 
 The website is built with pure HTML/CSS/JavaScript.
-MrBlacksin (technote8t)
+MrBlacksin (TechNote8T, MadCat)
 
 ### Local Development
 ```bash
@@ -42,6 +42,7 @@ xdg-open index.html
 ## 🛠️ Разработка
 
 Сайт создан на чистом HTML/CSS/JavaScript.
+MrBlacksin (TechNote8T, MadCat)
 
 ### Локальный запуск
 ```bash
@@ -72,6 +73,7 @@ xdg-open index.html
 ## 🛠️ Розробка
 
 Веб-сайт створено на чистому HTML/CSS/JavaScript.
+MrBlacksin (TechNote8T, MadCat)
 
 ### Локальний запуск
 ```bash
