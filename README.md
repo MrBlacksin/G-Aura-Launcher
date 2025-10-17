@@ -13,6 +13,10 @@ The latest version of the application can be downloaded in the [Releases section
 The website is built with pure HTML/CSS/JavaScript.
 MrBlacksin (TechNote8T, MadCat)
 
+## 📄 License
+
+This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
 ### Local Development
 ```bash
 # Simply open index.html in your browser
@@ -38,6 +42,10 @@ start index.html
 Сайт создан на чистом HTML/CSS/JavaScript.
 MrBlacksin (TechNote8T, MadCat)
 
+## 📄 License
+
+Этот проект распространяется под лицензией MIT. Подробнее см. в файле [LICENSE](LICENSE)
+
 ### Локальный запуск
 ```bash
 # Просто откройте index.html в браузере
@@ -62,6 +70,8 @@ start index.html
 
 Веб-сайт створено на чистому HTML/CSS/JavaScript.
 MrBlacksin (TechNote8T, MadCat)
+
+Цей проект поширюється під ліцензією MIT. Детальніше див. у файлі [LICENSE](LICENSE).
 
 ### Локальний запуск
 ```bash
