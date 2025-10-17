@@ -6,7 +6,7 @@ This is the official website for G-Aura Launcher - a modern application launcher
 
 ## 📦 Download Application
 
-The latest version of the application can be downloaded in the [https://github.com/MrBlacksin/G-Aura-Launcher/releases]
+The latest version of the application can be downloaded in the https://github.com/MrBlacksin/G-Aura-Launcher/releases
 
 ## 🛠️ Development
 
