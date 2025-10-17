@@ -19,12 +19,6 @@ MrBlacksin (TechNote8T, MadCat)
 # On Windows:
 start index.html
 
-# On Mac:
-open index.html
-
-# On Linux:
-xdg-open index.html
-
 # Or simply double-click the index.html file
 
 ================================================
@@ -50,12 +44,6 @@ MrBlacksin (TechNote8T, MadCat)
 # На Windows:
 start index.html
 
-# На Mac:
-open index.html
-
-# На Linux:
-xdg-open index.html
-
 # Или просто дважды кликните файл index.html
 
 ================================================
@@ -80,16 +68,5 @@ MrBlacksin (TechNote8T, MadCat)
 # Просто відкрийте index.html у браузері
 # На Windows:
 start index.html
-
-# На Mac:
-open index.html
-
-# На Linux:
-xdg-open index.html
-
-# Або просто двічі клацніть файл index.html
-
-# На Linux:
-xdg-open index.html
 
 # Або просто двічі клацніть файл index.html
