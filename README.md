@@ -1,6 +1,6 @@
 # G-Aura Launcher - Official Website
 
-🌐 **Live Demo**: https://mrblacksin.github.io/G-Aura-Launcher/
+🌐 **Site**: https://mrblacksin.github.io/G-Aura-Launcher/
 
 This is the official website for G-Aura Launcher - a modern application launcher for Windows.
 
@@ -29,7 +29,7 @@ start index.html
 
 # G-Aura Launcher - Официальный сайт
 
-🌐 **Живое демо**: https://your-username.github.io/G-Aura-Launcher
+🌐 **Сайт**: https://your-username.github.io/G-Aura-Launcher
 
 Это официальный сайт для G-Aura Launcher - современного лаунчера приложений для Windows.
 
@@ -58,7 +58,7 @@ start index.html
 
 # G-Aura Launcher - Офіційний веб-сайт
 
-🌐 **Жива демонстрація**: https://your-username.github.io/G-Aura-Launcher
+🌐 **Сайт**: https://your-username.github.io/G-Aura-Launcher
 
 Це офіційний веб-сайт для G-Aura Launcher - сучасного лаунчера додатків для Windows.
 
