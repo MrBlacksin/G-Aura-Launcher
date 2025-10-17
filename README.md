@@ -11,6 +11,7 @@ The latest version of the application can be downloaded in the [Releases section
 ## 🛠️ Development
 
 The website is built with pure HTML/CSS/JavaScript.
+MrBlacksin (technote8t)
 
 ### Local Development
 ```bash
