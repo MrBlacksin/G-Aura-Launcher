@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Aura Launcher - Современный лаунчер для Windows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #1c1c1e;
+            --bg-secondary: #2c2c2e;
+            --accent: #00d5ff;
+            --text-primary: #e1e1e6;
+            --text-secondary: #a1a1a6;
+            --card-bg: #2c2c2e;
+            --glow: 0 0 20px rgba(0, 213, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #151516 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(28, 28, 30, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .download-btn {
+            background: var(--accent);
+            color: var(--bg-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: 2px solid var(--accent);
+        }
+
+        .download-btn:hover {
+            background: transparent;
+            color: var(--accent);
+            box-shadow: var(--glow);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 213, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #00aaff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--accent);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--accent);
+            box-shadow: var(--glow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        .app-preview {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--glow);
+            border: 2px solid var(--accent);
+        }
+
+        .app-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: var(--bg-secondary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+            color: var(--accent);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        /* Screenshots Section */
+        .screenshots {
+            padding: 80px 0;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .screenshot {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Download Section */
+        .download {
+            padding: 80px 0;
+            background: var(--bg-secondary);
+            text-align: center;
+        }
+
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .download-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        .download-card h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .version {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .file-size {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-primary);
+            padding: 3rem 0;
+            border-top: 1px solid #333;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                G-Aura Launcher
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Возможности</a></li>
+                <li><a href="#screenshots">Скриншоты</a></li>
+                <li><a href="#download">Скачать</a></li>
+                <li><a href="#support">Поддержка</a></li>
+            </ul>
+            <a href="#download" class="download-btn">Скачать v3.8.0</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">G-Aura Launcher</h1>
+            <p class="hero-subtitle fade-in">
+                Современный лаунчер приложений для Windows с красивым интерфейсом, 
+                анимациями и поддержкой перетаскивания
+            </p>
+            <div class="hero-btns fade-in">
+                <a href="#download" class="btn btn-primary">Скачать бесплатно</a>
+                <a href="#features" class="btn btn-secondary">Узнать больше</a>
+            </div>
+            <div class="app-preview fade-in">
+                <!-- Placeholder for app screenshot -->
+                <div style="background: linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 100%); height: 400px; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.2rem;">
+                    📱 Скриншот G-Aura Launcher
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Возможности</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Красивый интерфейс</h3>
+                    <p>Тёмная и светлая темы с настраиваемыми цветами. Плавные анимации и современный дизайн.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Drag & Drop</h3>
+                    <p>Перетаскивайте приложения для изменения их порядка. Интуитивно понятное управление.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Многоязычность</h3>
+                    <p>Поддержка русского, английского и украинского языков. Легкое переключение между языками.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Быстрый запуск</h3>
+                    <p>Мгновенный запуск приложений. Навигация с помощью клавиш A/D и стрелок.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Умная навигация</h3>
+                    <p>Перелистывание страниц колесиком мыши, клавишами A/D или стрелками. Плавные переходы.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Гибкие настройки</h3>
+                    <p>Настройте всё под себя: цвета, анимации, скорость, эффекты подсветки.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2 class="section-title">Скриншоты</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot fade-in">
+                    <div style="background: #1c1c1e; height: 200px; display: flex; align-items: center; justify-content: center; color: var(--accent);">
+                        📊 Главный экран
+                    </div>
+                </div>
+                <div class="screenshot fade-in">
+                    <div style="background: #2c2c2e; height: 200px; display: flex; align-items: center; justify-content: center; color: var(--accent);">
+                        ⚙️ Настройки
+                    </div>
+                </div>
+                <div class="screenshot fade-in">
+                    <div style="background: #1c1c1e; height: 200px; display: flex; align-items: center; justify-content: center; color: var(--accent);">
+                        🎨 Выбор темы
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title">Скачать G-Aura Launcher</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">
+                Версия 3.8.0 • Совместимость: Windows 10/11
+            </p>
+            
+            <div class="download-options">
+                <div class="download-card fade-in">
+                    <h3>📦 Стандартная версия</h3>
+                    <p class="version">v3.8.0</p>
+                    <p class="file-size">~2 MB</p>
+                    <a href="#" class="btn btn-primary" style="display: block;">Скачать EXE</a>
+                </div>
+                <div class="download-card fade-in">
+                    <h3>🔧 Portable версия</h3>
+                    <p class="version">v3.8.0</p>
+                    <p class="file-size">~2 MB</p>
+                    <a href="#" class="btn btn-secondary" style="display: block;">Скачать ZIP</a>
+                </div>
+                <div class="download-card fade-in">
+                    <h3>📚 Исходный код</h3>
+                    <p class="version">Python + PyQt5</p>
+                    <p class="file-size">Полный код</p>
+                    <a href="#" class="btn btn-secondary" style="display: block;">GitHub</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--card-bg); border-radius: 15px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3 style="color: var(--accent); margin-bottom: 1rem;">Системные требования</h3>
+                <ul style="text-align: left; color: var(--text-secondary); list-style-position: inside;">
+                    <li>Windows 10 или новее</li>
+                    <li>4 GB оперативной памяти</li>
+                    <li>50 MB свободного места</li>
+                    <li>Python 3.8+ (для исходного кода)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="support">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>G-Aura Launcher</h3>
+                    <p>Современный лаунчер приложений с открытым исходным кодом для Windows.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Возможности</a></li>
+                        <li><a href="#screenshots">Скриншоты</a></li>
+                        <li><a href="#download">Скачать</a></li>
+                        <li><a href="#">Документация</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Поддержка</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Сообщить о ошибке</a></li>
+                        <li><a href="#">Форум</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Разработчик</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">MrBlacksin</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Другие проекты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 G-Aura Launcher. Все права защищены. | By MrBlacksin</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
