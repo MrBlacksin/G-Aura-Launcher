@@ -1,6 +1,6 @@
 # G-Aura Launcher - Official Website
 
-🌐 **Live Demo**: https://your-username.github.io/G-Aura-Launcher
+🌐 **Live Demo**: https://mrblacksin.github.io/G-Aura-Launcher/
 
 This is the official website for G-Aura Launcher - a modern application launcher for Windows.
 
