@@ -11,7 +11,8 @@ The latest version of the application can be downloaded in the Releases section:
 ## 🛠️ Development
 
 The website is built with pure HTML/CSS/JavaScript.
-MrBlacksin (TechNote8T, MadCat)
+Developer: MrBlacksin (TechNote8T, MadCat)
+Beta tester: Arturio (@ARTURIO9912)
 
 ## 📄 License
 
@@ -40,7 +41,8 @@ start index.html
 ## 🛠️ Разработка
 
 Сайт создан на чистом HTML/CSS/JavaScript.
-MrBlacksin (TechNote8T, MadCat)
+Разработчик: MrBlacksin (TechNote8T, MadCat)
+Бета-тестер: Артурио (@ARTURIO9912)
 
 ## 📄 License
 
@@ -69,7 +71,8 @@ start index.html
 ## 🛠️ Розробка
 
 Веб-сайт створено на чистому HTML/CSS/JavaScript.
-MrBlacksin (TechNote8T, MadCat)
+Розробник: MrBlacksin (TechNote8T, MadCat)
+Бета-тестер: Артуріо (@ARTURIO9912)
 
 Цей проект поширюється під ліцензією MIT. Детальніше див. у файлі [LICENSE](LICENSE).
 
