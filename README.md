@@ -29,7 +29,7 @@ start index.html
 
 # G-Aura Launcher - Официальный сайт
 
-🌐 **Сайт**: https://your-username.github.io/G-Aura-Launcher
+🌐 **Сайт**: https://mrblacksin.github.io/G-Aura-Launcher/
 
 Это официальный сайт для G-Aura Launcher - современного лаунчера приложений для Windows.
 
@@ -58,7 +58,7 @@ start index.html
 
 # G-Aura Launcher - Офіційний веб-сайт
 
-🌐 **Сайт**: https://your-username.github.io/G-Aura-Launcher
+🌐 **Сайт**: https://mrblacksin.github.io/G-Aura-Launcher/
 
 Це офіційний веб-сайт для G-Aura Launcher - сучасного лаунчера додатків для Windows.
 
