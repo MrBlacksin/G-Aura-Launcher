@@ -1,0 +1,39 @@
+Terms of Use / Условия использования / Умови використання
+English
+
+By using G-Aura Launcher, you agree to these Terms of Use.
+
+G-Aura Launcher is provided "as is". The developer does not guarantee uninterrupted operation of the application and is not responsible for any errors, malfunctions, data loss, or other damages that may result from the use of the software.
+
+Users agree to use the application only for lawful purposes and must not engage in activities that could disrupt the operation of the application or harm other users.
+
+The developer reserves the right to modify, update, suspend, or discontinue G-Aura Launcher at any time without prior notice.
+
+By continuing to use G-Aura Launcher, you acknowledge and accept these Terms of Use.
+
+Русский
+
+Используя G-Aura Launcher, вы соглашаетесь с настоящими Условиями использования.
+
+G-Aura Launcher предоставляется пользователям «как есть». Разработчик не гарантирует бесперебойную работу приложения и не несёт ответственности за возможные ошибки, сбои, потерю данных или иной ущерб, возникший в результате использования программы.
+
+Пользователь обязуется использовать приложение только в законных целях и не предпринимать действий, способных нарушить работу приложения или нанести вред другим пользователям.
+
+Разработчик оставляет за собой право изменять, обновлять, приостанавливать или прекращать работу G-Aura Launcher без предварительного уведомления.
+
+Продолжая использование G-Aura Launcher, вы подтверждаете своё согласие с данными Условиями использования.
+
+Українська
+
+Використовуючи G-Aura Launcher, ви погоджуєтесь із цими Умовами використання.
+
+G-Aura Launcher надається користувачам «як є». Розробник не гарантує безперебійну роботу застосунку та не несе відповідальності за можливі помилки, збої, втрату даних або будь-які інші збитки, що можуть виникнути внаслідок використання програми.
+
+Користувач зобов'язується використовувати застосунок лише в законних цілях і не здійснювати дій, які можуть порушити роботу застосунку або завдати шкоди іншим користувачам.
+
+Розробник залишає за собою право змінювати, оновлювати, призупиняти або припиняти роботу G-Aura Launcher без попереднього повідомлення.
+
+Продовжуючи використання G-Aura Launcher, ви підтверджуєте свою згоду з цими Умовами використання.
+
+Effective Date / Дата вступления в силу / Дата набуття чинності: 23 June 2026
+Developer / Разработчик / Розробник: MrBlacksin (G-Aura Launcher Team)
